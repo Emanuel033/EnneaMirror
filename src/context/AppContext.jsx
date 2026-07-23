@@ -9,11 +9,11 @@ export const AppProvider = ({ children }) => {
   const [categoriaActiva, setCategoriaActiva] = useState('Todos');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Recuperar carrito del navegador
+  // Recuperar cotización del navegador (He actualizado la clave a 'ennea_cotizacion')
   const [carrito, setCarrito] = useState(() => {
     try {
-      const carritoGuardado = localStorage.getItem('carrito_monimila');
-      return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+      const cotizacionGuardada = localStorage.getItem('ennea_cotizacion');
+      return cotizacionGuardada ? JSON.parse(cotizacionGuardada) : [];
     } catch (error) {
       return [];
     }
@@ -22,10 +22,10 @@ export const AppProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('carrito_monimila', JSON.stringify(carrito));
+    localStorage.setItem('ennea_cotizacion', JSON.stringify(carrito));
   }, [carrito]);
 
-  // Cargar el catálogo (Asegúrate de tener un archivo catalogo.json en tu carpeta public)
+  // Cargar el catálogo
   useEffect(() => {
     const fetchProductos = async () => {
       try {
@@ -36,8 +36,9 @@ export const AppProvider = ({ children }) => {
         
         setProductos(productosData);
         
-        // Extraer categorías únicas
-        let uniqueCats = [...new Set(productosData.map(p => p.category || 'Postres'))];
+        // --- CORRECCIÓN AQUÍ ---
+        // Extraer categorías únicas usando 'p.categoria' de tu nuevo JSON
+        let uniqueCats = [...new Set(productosData.map(p => p.categoria || 'Manufactura Digital'))];
         uniqueCats = uniqueCats.filter(c => c.toLowerCase() !== 'todos').sort();
         setCategorias(['Todos', ...uniqueCats]);
         
@@ -56,7 +57,9 @@ export const AppProvider = ({ children }) => {
   };
 
   const toggleCart = () => setIsCartOpen(!isCartOpen);
-  const clearCart = () => { if(window.confirm('¿Deseas vaciar tu caja de postres?')) setCarrito([]); };
+  
+  // Actualizado texto de MoniMila
+  const clearCart = () => { if(window.confirm('¿Deseas vaciar tu lista de cotización?')) setCarrito([]); };
 
   const agregarAlCarrito = (producto, cantidad = 1) => {
     setCarrito((prev) => {
@@ -64,11 +67,16 @@ export const AppProvider = ({ children }) => {
       if (existe) return prev.map(item => item.id === producto.id ? { ...item, cantidad: item.cantidad + cantidad } : item);
       return [...prev, { ...producto, cantidad }];
     });
-    setIsCartOpen(true); // Abre el carrito automáticamente al agregar
+    setIsCartOpen(true); // Abre el panel automáticamente
   };
 
   const eliminarProducto = (id) => setCarrito(prev => prev.filter(item => item.id !== id));
   
+  // Actualizado texto de MoniMila
+  const quitarDelCarrito = (id) => {
+    setCarrito(prev => prev.map(item => item.id === id ? { ...item, cantidad: Math.max(1, item.cantidad - 1) } : item));
+  };
+
   const totalPiezas = carrito.reduce((sum, item) => sum + item.cantidad, 0);
 
   return (
@@ -76,7 +84,7 @@ export const AppProvider = ({ children }) => {
       productos, categorias, cargando, categoriaActiva, setCategoriaActiva,
       searchTerm, setSearchTerm, seleccionarCategoria, 
       carrito, isCartOpen, setIsCartOpen, toggleCart, clearCart, 
-      agregarAlCarrito, eliminarProducto, totalPiezas
+      agregarAlCarrito, eliminarProducto, quitarDelCarrito, totalPiezas
     }}>
       {children}
     </AppContext.Provider>

@@ -23,6 +23,7 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/catalogo" element={<Catalogo />} />
+            <Route element="{<AdminCotizador" path="/admin-cotizador"/>} />
           </Routes>
         </main>
 
