@@ -1,35 +1,32 @@
-{
-  "servicios": [
-    {
-      "id": "3d-001",
-      "categoria": "Manufactura Digital",
-      "titulo": "Llavero Personalizado 3D",
-      "descripcion": "Diseño y modelado 3D a partir de fotografía. Impresión en alta resolución con material resistente.",
-      "precio": 250,
-      "moneda": "MXN",
-      "tiempo_estimado": "24 - 48 hrs",
-      "etiquetas": ["Diseño 3D", "Regalos", "Prototipado"]
-    },
-    {
-      "id": "3d-002",
-      "categoria": "Manufactura Digital",
-      "titulo": "Prototipado Rápido",
-      "descripcion": "Impresión de piezas mecánicas, refacciones o prototipos funcionales a partir de archivos .STL o .STEP.",
-      "precio": "Cotización a medida",
-      "moneda": "MXN",
-      "tiempo_estimado": "Variable",
-      "etiquetas": ["Ingeniería", "FDM", "Refacciones"]
-    },
-    {
-      "id": "web-001",
-      "categoria": "Desarrollo Web",
-      "titulo": "Landing Page Empresarial",
-      "descripcion": "Diseño web de una sola página (Single Page Application) optimizada para conversiones y velocidad.",
-      "precio": 1500,
-      "moneda": "MXN",
-      "tiempo_estimado": "3 - 5 días",
-      "etiquetas": ["React", "UI/UX", "Responsive"]
-    }
-  ]
-}
-
+[
+  {
+    "id": "3d-001",
+    "categoria": "Manufactura Digital",
+    "titulo": "Llavero Personalizado 3D",
+    "descripcion": "Diseño y modelado 3D a partir de fotografía. Impresión en alta resolución con material resistente.",
+    "precio": 250,
+    "moneda": "MXN",
+    "tiempo_estimado": "24 - 48 hrs",
+    "etiquetas": ["Diseño 3D", "Regalos", "Prototipado"]
+  },
+  {
+    "id": "3d-002",
+    "categoria": "Manufactura Digital",
+    "titulo": "Prototipado Rápido",
+    "descripcion": "Impresión de piezas mecánicas, refacciones o prototipos funcionales a partir de archivos .STL o .STEP.",
+    "precio": 800,
+    "moneda": "MXN",
+    "tiempo_estimado": "Variable",
+    "etiquetas": ["Ingeniería", "FDM", "Refacciones"]
+  },
+  {
+    "id": "web-001",
+    "categoria": "Desarrollo Web",
+    "titulo": "Landing Page Empresarial",
+    "descripcion": "Diseño web de una sola página (Single Page Application) optimizada para conversiones y velocidad.",
+    "precio": 1500,
+    "moneda": "MXN",
+    "tiempo_estimado": "3 - 5 días",
+    "etiquetas": ["React", "UI/UX", "Responsive"]
+  }
+]

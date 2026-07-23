@@ -1,8 +1,8 @@
 {
-  "id": "/app-catalogo-v1",
+  "id": "/app-ennea-v1",
   "scope": "/",
-  "name": "Catálogo La Económica",
-  "short_name": "Catálogo",
+  "name": "Ennea Mirror",
+  "short_name": "Ennea Mirror",
   "start_url": "/?modo=app",
   "display": "standalone",
   "background_color": "#ffffff",

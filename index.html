@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" href="/icons/logo-192.png" />
     
     <meta name="theme-color" content="#312e81" />
-    <title>MoniMila Bakery</title>
+    <title>Ennea Mirror</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     
@@ -19,15 +19,6 @@
         const path = window.location.pathname;
         let manifestUrl = '/manifest.json'; // Por defecto instala el Catálogo
         
-        if (path.includes('rutas')) {
-          manifestUrl = '/manifest-rutas.json';
-        } else if (path.includes('admin')) {
-          manifestUrl = '/manifest-admin.json';
-        } else if (path.includes('chofer')) {
-          manifestUrl = '/manifest-chofer.json';
-        } else if (path.includes('inventario')) {
-          manifestUrl = '/manifest-inventario.json';
-        }
 
         const link = document.createElement('link');
         link.rel = 'manifest';
