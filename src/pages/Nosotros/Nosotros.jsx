@@ -2,57 +2,56 @@ import React from 'react';
 
 function Nosotros() {
   return (
-    <div className="bg-slate-50 min-h-screen pb-24">
+    <div className="bg-white min-h-screen pb-24">
       
       {/* Encabezado / Hero */}
-      <header className="bg-[#F5EEFD] py-20 text-center px-4">
+      <header className="bg-slate-900 py-20 text-center px-4">
         <div className="max-w-3xl mx-auto">
-          <span className="text-[#4A2B50] font-black uppercase tracking-[0.3em] text-[10px] bg-white px-4 py-1.5 rounded-full shadow-sm">
-            Nuestra Esencia
+          <span className="text-cyan-400 font-black uppercase tracking-[0.3em] text-[10px] bg-slate-800 border border-slate-700 px-4 py-1.5 rounded-full shadow-sm">
+            Sobre Nosotros
           </span>
-          <h1 className="mt-8 text-4xl md:text-5xl font-serif font-bold text-[#4A2B50] leading-tight">
-            Monimila Bakery
+          <h1 className="mt-8 text-4xl md:text-5xl font-sans font-bold text-white leading-tight">
+            Ennea Mirror
           </h1>
-          <p className="mt-6 text-xl text-slate-600 font-medium italic">
-            "Bocaditos para el alma."
+          <p className="mt-6 text-xl text-slate-300 font-medium">
+            "Donde el código toma forma."
           </p>
         </div>
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
         
-        {/* Sección Historia con el Logo de tus abuelos */}
-        <section className="bg-white rounded-3xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
+        {/* Sección Historia con el Logo Nuevo */}
+        <section className="bg-slate-50 rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12 mb-12">
           <div className="flex flex-col md:flex-row gap-10 items-center">
             
-            {/* Aquí es donde aparecerá el logo gigante de 30838.png sin fondo */}
             <div className="w-full md:w-1/3 flex justify-center">
+              {/* Aquí apunta a tu logo recién movido a la carpeta public/iconos */}
               <img 
-                src="/icons/logo-512.png" 
-                alt="Logo MoniMila Bakery - Manuel y Edelmira" 
-                className="w-56 h-56 md:w-72 md:h-72 object-contain drop-shadow-lg transition-transform hover:scale-105 duration-300"
+                src="/iconos/logo-512.png" 
+                alt="Logo Ennea Mirror" 
+                className="w-56 h-56 md:w-72 md:h-72 object-contain drop-shadow-md transition-transform hover:scale-105 duration-300"
                 onError={(e) => {
-                  // Si por alguna razón no carga el logo, muestra un círculo bonito de repuesto
                   e.target.onerror = null;
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'flex';
                 }}
               />
-              <div className="hidden w-48 h-48 bg-[#F5EEFD] rounded-full items-center justify-center text-[#4A2B50] text-6xl shadow-inner">
-                <i className="fa-solid fa-heart"></i>
+              <div className="hidden w-48 h-48 bg-cyan-50 rounded-full items-center justify-center text-cyan-600 text-6xl shadow-inner">
+                <i className="fa-solid fa-microchip"></i>
               </div>
             </div>
 
             <div className="w-full md:w-2/3">
-              <h2 className="text-3xl font-serif font-bold text-[#4A2B50] mb-6 border-b border-[#F5EEFD] pb-4">
+              <h2 className="text-3xl font-sans font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">
                 Nuestra Historia
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Monimila Bakery nació como un homenaje a las personas que sembraron en mí el amor por la cocina: mis abuelos, <strong className="text-[#4A2B50]">Manuel y Edelmira</strong>. A Manuel todos le decían "Moni" y a Edelmira, "Mila". De la unión de sus nombres surgió Monimila, un símbolo de sus enseñanzas, su cariño y el hermoso legado que dejaron en nuestra familia.
+                  Ennea Mirror surge de la intersección entre la ingeniería de software y la manufactura física. Con una sólida base en el análisis de sistemas, la gestión de bases de datos y la automatización de flujos de trabajo, el proyecto evolucionó al descubrir el potencial de llevar el diseño digital al mundo real.
                 </p>
                 <p>
-                  Hace algunos años comencé este proyecto elaborando alfajores con la ilusión de crear postres que transmitieran emociones. Tras una pausa para dedicarme a mis estudios y prácticas profesionales, el deseo de regresar a la cocina nunca desapareció. Hoy, Monimila Bakery renace con más experiencia, nuevos sueños y el mismo amor de siempre por la repostería.
+                  Lo que comenzó como una optimización de código y despliegue de interfaces en entornos móviles, pronto se fusionó con la precisión de la impresión 3D. Hoy, Ennea Mirror representa la capacidad de diseñar una solución de software robusta y, al mismo tiempo, fabricar piezas y prototipos personalizados con precisión milimétrica.
                 </p>
               </div>
             </div>
@@ -60,20 +59,20 @@ function Nosotros() {
         </section>
 
         {/* Sección Filosofía (Estilo Cita) */}
-        <section className="bg-[#4A2B50] rounded-3xl shadow-md p-8 md:p-14 text-center mb-12 relative overflow-hidden">
+        <section className="bg-slate-900 rounded-3xl shadow-lg p-8 md:p-14 text-center mb-12 relative overflow-hidden">
           <i className="fa-solid fa-quote-left absolute top-6 left-8 text-6xl text-white opacity-5"></i>
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-sans font-bold text-white mb-6">
             Nuestra Filosofía
           </h2>
-          <div className="max-w-3xl mx-auto space-y-6 text-[#E8D8F8] text-lg leading-relaxed font-medium">
+          <div className="max-w-3xl mx-auto space-y-6 text-slate-300 text-lg leading-relaxed font-medium">
             <p>
-              Para mí, hornear es un refugio. Es el momento en el que el tiempo parece detenerse, las preocupaciones desaparecen y solo existe la felicidad de crear algo con mis propias manos.
+              Creemos que la tecnología debe ser accesible, escalable y, sobre todo, funcional. Ya sea estructurando el frontend de una aplicación web o configurando los parámetros de laminado para una extrusión perfecta, la atención al detalle lo es todo.
             </p>
             <p>
-              Creo firmemente que un postre es mucho más que un antojo. Puede convertirse en un recuerdo, una celebración, un consuelo o una forma de decir <span className="italic text-white">"estoy contigo"</span>. Por eso, cada receta está preparada con dedicación, buscando que cada persona encuentre en ella un instante de calma, alegría y cariño. 
+              No vemos barreras entre el software y el hardware; vemos un ecosistema continuo. Escribimos código limpio para asegurar el rendimiento en la nube y calibramos nuestra maquinaria para garantizar resistencia y calidad en cada filamento depositado.
             </p>
-            <p className="text-white font-bold text-xl pt-4 border-t border-[#E8D8F8]/20">
-              Porque un bocadito puede alimentar el alma tanto como el corazón.
+            <p className="text-cyan-400 font-bold text-xl pt-4 border-t border-slate-700">
+              Transformamos la lógica pura en herramientas tangibles.
             </p>
           </div>
           <i className="fa-solid fa-quote-right absolute bottom-6 right-8 text-6xl text-white opacity-5"></i>
@@ -83,24 +82,24 @@ function Nosotros() {
         <section className="grid md:grid-cols-2 gap-8">
           
           {/* Misión */}
-          <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-8 md:p-10 hover:-translate-y-1 transition-transform duration-300">
-            <div className="w-14 h-14 bg-[#F5EEFD] rounded-2xl flex items-center justify-center text-[#4A2B50] text-2xl mb-6">
-              <i className="fa-solid fa-bullseye"></i>
+          <div className="bg-slate-50 rounded-3xl shadow-sm border border-slate-200 p-8 md:p-10 hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-cyan-600 text-2xl mb-6">
+              <i className="fa-solid fa-server"></i>
             </div>
-            <h3 className="text-2xl font-serif font-bold text-[#4A2B50] mb-4">Misión</h3>
+            <h3 className="text-2xl font-sans font-bold text-slate-900 mb-4">Misión</h3>
             <p className="text-slate-600 leading-relaxed">
-              Crear postres artesanales que transmitan amor, calidez y felicidad, inspirados en las recetas, enseñanzas y valores familiares. Buscamos que cada creación ofrezca una experiencia que reconforte, despierte dulces recuerdos y haga sentir a nuestros clientes como si recibieran un abrazo en cada mordida.
+              Brindar soluciones tecnológicas integrales, desde el despliegue de sitios web responsivos y eficientes, hasta la manufactura de piezas impresas en 3D bajo demanda. Nos enfocamos en resolver problemas reales mediante la automatización y el diseño paramétrico.
             </p>
           </div>
 
           {/* Visión */}
-          <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-8 md:p-10 hover:-translate-y-1 transition-transform duration-300">
-            <div className="w-14 h-14 bg-[#F5EEFD] rounded-2xl flex items-center justify-center text-[#4A2B50] text-2xl mb-6">
-              <i className="fa-solid fa-eye"></i>
+          <div className="bg-slate-50 rounded-3xl shadow-sm border border-slate-200 p-8 md:p-10 hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-cyan-600 text-2xl mb-6">
+              <i className="fa-solid fa-rocket"></i>
             </div>
-            <h3 className="text-2xl font-serif font-bold text-[#4A2B50] mb-4">Visión</h3>
+            <h3 className="text-2xl font-sans font-bold text-slate-900 mb-4">Visión</h3>
             <p className="text-slate-600 leading-relaxed">
-              Convertir a Monimila Bakery en una marca reconocida por la calidad, la creatividad y el cariño que transmite cada uno de nuestros postres. Ampliar nuestro catálogo fusionando nuestras opciones tradicionales con propuestas innovadoras de temporada, manteniendo siempre intacta la esencia que dio origen a este proyecto: hacer que cada bocadito llegue directo al alma.
+              Posicionar a Ennea Mirror como un referente en la creación ágil de herramientas digitales y físicas. Aspiramos a ser el puente confiable para emprendedores e ingenieros que necesitan materializar sus ideas, ya sea alojándolas en un servidor o imprimiéndolas capa por capa.
             </p>
           </div>
 
