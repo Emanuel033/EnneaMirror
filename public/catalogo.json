@@ -1,32 +1,47 @@
 [
   {
-    "id": "3d-001",
-    "categoria": "Manufactura Digital",
-    "titulo": "Llavero Personalizado 3D",
-    "descripcion": "Diseño y modelado 3D a partir de fotografía. Impresión en alta resolución con material resistente.",
+    "id": "llavero-mascota-mono",
+    "nombre": "Llavero Mascota Monocromo",
+    "descripcion": "Llavero impreso en 3D de alta resolución. Acabado en un solo color sólido con textura uniforme y herraje metálico incluido.",
     "precio": 250,
-    "moneda": "MXN",
-    "tiempo_estimado": "24 - 48 hrs",
-    "etiquetas": ["Diseño 3D", "Regalos", "Prototipado"]
-  },
-  {
-    "id": "3d-002",
     "categoria": "Manufactura Digital",
-    "titulo": "Prototipado Rápido",
-    "descripcion": "Impresión de piezas mecánicas, refacciones o prototipos funcionales a partir de archivos .STL o .STEP.",
-    "precio": 800,
-    "moneda": "MXN",
-    "tiempo_estimado": "Variable",
-    "etiquetas": ["Ingeniería", "FDM", "Refacciones"]
+    "imagen": "/llavero-mono.webp",
+    "coloresDisponibles": ["Negro", "Blanco", "Naranja", "Rojo", "Azul", "Gris"]
   },
   {
-    "id": "web-001",
-    "categoria": "Desarrollo Web",
-    "titulo": "Landing Page Empresarial",
-    "descripcion": "Diseño web de una sola página (Single Page Application) optimizada para conversiones y velocidad.",
+    "id": "llavero-emblema-color",
+    "nombre": "Llavero Emblema Corazón",
+    "descripcion": "Llavero impreso en 3D multicolor directo. Capas de color vibrante integradas desde la fabricación, sin aplicación de pintura.",
+    "precio": 350,
+    "categoria": "Manufactura Digital",
+    "imagen": "/llavero-color.webp",
+    "coloresDisponibles": ["Original Multicolor"]
+  },
+  {
+    "id": "figura-mascota-mono",
+    "nombre": "Estatuilla Mascota a Medida",
+    "descripcion": "Figura a escala ideal para decoración o coleccionismo. Impresión de gran formato con acabado mate y líneas de capa limpias.",
+    "precio": 800,
+    "categoria": "Manufactura Digital",
+    "imagen": "/figura-mono.webp",
+    "coloresDisponibles": ["Negro", "Blanco", "Naranja", "Rojo", "Azul", "Gris"]
+  },
+  {
+    "id": "figura-fantasia-color",
+    "nombre": "Figura Personaje de Fantasía",
+    "descripcion": "Pieza de colección impresa a color. Transiciones de filamento exactas para un modelo complejo y listo para exhibición.",
+    "precio": 1200,
+    "categoria": "Manufactura Digital",
+    "imagen": "/figura-color.webp",
+    "coloresDisponibles": ["Original Multicolor"]
+  },
+  {
+    "id": "web-landing-page",
+    "nombre": "Landing Page Empresarial",
+    "descripcion": "Diseño y desarrollo de página web optimizada de una sola vista, ideal para negocios o portafolios.",
     "precio": 1500,
-    "moneda": "MXN",
-    "tiempo_estimado": "3 - 5 días",
-    "etiquetas": ["React", "UI/UX", "Responsive"]
+    "categoria": "Desarrollo Web",
+    "imagen": "/landing-page.webp",
+    "coloresDisponibles": []
   }
 ]

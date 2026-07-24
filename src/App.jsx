@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Inicio from './pages/Inicio/Inicio'; // O la ruta donde lo tengas
 import Nosotros from './pages/Nosotros/Nosotros'; // O la ruta donde lo tengas
 import Catalogo from './pages/Catalogo/Catalogo'; //(Si tienes un archivo para tu menú)
-
+import AdminCotizador from './pages/AdminCotizador'; 
 function App() {
   return (
     <Router>
@@ -23,7 +23,7 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/catalogo" element={<Catalogo />} />
-            <Route element="{<AdminCotizador" path="/admin-cotizador"/>} />
+<Route path="/admin-cotizador" element={<AdminCotizador/>}  />
           </Routes>
         </main>
 
